@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A0CB098928F3AA6C008C236D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0CB098828F3AA6C008C236D /* main.cpp */; };
+		A0CB099128F3AA79008C236D /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CB099028F3AA79008C236D /* OpenGL.framework */; };
+		A0CB099328F3AA7E008C236D /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0CB099228F3AA7E008C236D /* GLUT.framework */; };
+		A0CB099528F3AB0F008C236D /* QuadMesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0CB099428F3AB0F008C236D /* QuadMesh.cpp */; };
+		A0CB099828F3AB18008C236D /* Robot3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A0CB099728F3AB18008C236D /* Robot3D.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A0CB098528F3AA6C008C236D /* Assignment1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Assignment1; sourceTree = BUILT_PRODUCTS_DIR; };
-		A0CB098828F3AA6C008C236D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		A0CB098528F3AA6C008C236D /* 3DBot */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 3DBot; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0CB099028F3AA79008C236D /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		A0CB099228F3AA7E008C236D /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		A0CB099428F3AB0F008C236D /* QuadMesh.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QuadMesh.cpp; sourceTree = "<group>"; };
+		A0CB099628F3AB14008C236D /* QuadMesh.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuadMesh.h; sourceTree = "<group>"; };
+		A0CB099728F3AB18008C236D /* Robot3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Robot3D.cpp; sourceTree = "<group>"; };
+		A0CB099928F3AB1D008C236D /* VECTOR3D.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VECTOR3D.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0CB099328F3AA7E008C236D /* GLUT.framework in Frameworks */,
+				A0CB099128F3AA79008C236D /* OpenGL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,33 +51,46 @@
 		A0CB097C28F3AA6B008C236D = {
 			isa = PBXGroup;
 			children = (
-				A0CB098728F3AA6C008C236D /* Assignment1 */,
+				A0CB098728F3AA6C008C236D /* 3DBot */,
 				A0CB098628F3AA6C008C236D /* Products */,
+				A0CB098F28F3AA79008C236D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		A0CB098628F3AA6C008C236D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0CB098528F3AA6C008C236D /* Assignment1 */,
+				A0CB098528F3AA6C008C236D /* 3DBot */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A0CB098728F3AA6C008C236D /* Assignment1 */ = {
+		A0CB098728F3AA6C008C236D /* 3DBot */ = {
 			isa = PBXGroup;
 			children = (
-				A0CB098828F3AA6C008C236D /* main.cpp */,
+				A0CB099628F3AB14008C236D /* QuadMesh.h */,
+				A0CB099728F3AB18008C236D /* Robot3D.cpp */,
+				A0CB099928F3AB1D008C236D /* VECTOR3D.h */,
+				A0CB099428F3AB0F008C236D /* QuadMesh.cpp */,
 			);
-			path = Assignment1;
+			path = 3DBot;
+			sourceTree = "<group>";
+		};
+		A0CB098F28F3AA79008C236D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A0CB099228F3AA7E008C236D /* GLUT.framework */,
+				A0CB099028F3AA79008C236D /* OpenGL.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0CB098428F3AA6C008C236D /* Assignment1 */ = {
+		A0CB098428F3AA6C008C236D /* 3DBot */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0CB098C28F3AA6C008C236D /* Build configuration list for PBXNativeTarget "Assignment1" */;
+			buildConfigurationList = A0CB098C28F3AA6C008C236D /* Build configuration list for PBXNativeTarget "3DBot" */;
 			buildPhases = (
 				A0CB098128F3AA6C008C236D /* Sources */,
 				A0CB098228F3AA6C008C236D /* Frameworks */,
@@ -77,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = Assignment1;
+			name = 3DBot;
 			productName = Assignment1;
-			productReference = A0CB098528F3AA6C008C236D /* Assignment1 */;
+			productReference = A0CB098528F3AA6C008C236D /* 3DBot */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +119,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A0CB098028F3AA6B008C236D /* Build configuration list for PBXProject "Assignment1" */;
+			buildConfigurationList = A0CB098028F3AA6B008C236D /* Build configuration list for PBXProject "3DBot" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +132,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0CB098428F3AA6C008C236D /* Assignment1 */,
+				A0CB098428F3AA6C008C236D /* 3DBot */,
 			);
 		};
 /* End PBXProject section */
@@ -119,7 +142,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0CB098928F3AA6C008C236D /* main.cpp in Sources */,
+				A0CB099528F3AB0F008C236D /* QuadMesh.cpp in Sources */,
+				A0CB099828F3AB18008C236D /* Robot3D.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,9 +264,11 @@
 		A0CB098D28F3AA6C008C236D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Q4T5FXY55V;
 				ENABLE_HARDENED_RUNTIME = YES;
+				OTHER_CFLAGS = "-Wno-deprecated";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -250,9 +276,11 @@
 		A0CB098E28F3AA6C008C236D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = Q4T5FXY55V;
 				ENABLE_HARDENED_RUNTIME = YES;
+				OTHER_CFLAGS = "-Wno-deprecated";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -260,7 +288,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0CB098028F3AA6B008C236D /* Build configuration list for PBXProject "Assignment1" */ = {
+		A0CB098028F3AA6B008C236D /* Build configuration list for PBXProject "3DBot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0CB098A28F3AA6C008C236D /* Debug */,
@@ -269,7 +297,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0CB098C28F3AA6C008C236D /* Build configuration list for PBXNativeTarget "Assignment1" */ = {
+		A0CB098C28F3AA6C008C236D /* Build configuration list for PBXNativeTarget "3DBot" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0CB098D28F3AA6C008C236D /* Debug */,
